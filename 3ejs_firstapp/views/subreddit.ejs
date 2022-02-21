@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/app.css">
+    <title><%=details.name%></title>
+  </head>
+  <body>
+    <h1 style="background-color: aqua">Hello Guys</h1>
+    <p>Browsing the <%=details.name %> subreddit</p>
+    <h2>Number of subscribers are<%=details.subscribers%></h2>
+    <hr />
+    <h1>POSTS</h1>
+    <% for (let post of details.posts) { %>
+    <h3><%= post.title%> -<b><%=post.author%></b></h3>
+    <%if(post.img) { %><img src="<%=post.img%>"/> <% }%>
+    <%}%>
+  </body>
+</html>

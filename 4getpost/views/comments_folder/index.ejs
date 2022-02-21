@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comments Index</title>
+  </head>
+  <body>
+    <h1>Comments</h1>
+
+    <ul>
+      <% for(let c of comments_var){ %>
+      <li><%=c.comment%> - <b><%=c.username%></b>
+      <a href="/comments/<%=c.id%>"> Details</a> </li>  <!--Directly go to the comments details according to id -->
+      <%} %>
+    </ul>
+    <a href="/comments/new">Create new comment</a> <!--we can go directly to created paths(routes) using links also -->
+  </body>                                          <!-- Because we have already created routes using  appp.get functions-->
+</html>

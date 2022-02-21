@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>show comment</title>
+  </head>
+  <body>
+    <h2>comment id:<%=required_comment.id%> </h2>
+
+    <h3> <%= required_comment.comment %> - <%= required_comment.username %> <a href="/comments/<%=required_comment.id%>/update">UPDATE</a> </h3> 
+    <form method="post" action="/comments/<%= required_comment.id %>?_method=DELETE"><button>Delete</button></form>
+   <br> <a href="/comments">view all comments</a> </br>
+  </body>                                         
+</html>
+                                      
